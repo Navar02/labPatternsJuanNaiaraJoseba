@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
-
-import domain.Covid19Pacient;
 import domain.Symptom;
 
 
