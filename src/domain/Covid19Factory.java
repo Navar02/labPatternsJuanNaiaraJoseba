@@ -9,8 +9,8 @@ public class Covid19Factory {
 	}
 
 	public Symptom createSymptom(String symptomName) {
-		List<String> impact5 = Arrays.asList("fiebre", "tos	seca", "astenia", "expectoracion");
-		List<Double> index5 = Arrays.asList(87.9, 67.7, 38.1, 33.4);
+		List<String> impact5 = Arrays.asList("fiebre", "tos	seca", "astenia", "expectoracion","mareos");
+		List<Double> index5 = Arrays.asList(87.9, 67.7, 38.1, 33.4,33.3);
 		List<String> impact3 = Arrays.asList("disnea", "dolor	de	garganta", "cefalea", "mialgia", "escalofrios");
 		List<Double> index3 = Arrays.asList(18.6, 13.9, 13.6, 14.8, 11.4);
 		List<String> impact1 = Arrays.asList("nauseas", "vómitos", "diarrea", "congestión	nasal", "hemoptisis",
