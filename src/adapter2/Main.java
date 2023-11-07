@@ -1,6 +1,6 @@
 package adapter2;
 
-import domain.Covid19Pacient;
+import iterator.Covid19Pacient;
 
 public class Main {
 

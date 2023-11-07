@@ -5,7 +5,7 @@ import java.util.Vector;
 
 import javax.swing.table.AbstractTableModel;
 
-import domain.Covid19Pacient;
+import iterator.Covid19Pacient;
 import domain.Symptom;
 
 public class PacientTableModel extends AbstractTableModel {
