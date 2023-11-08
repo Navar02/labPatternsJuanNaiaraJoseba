@@ -13,6 +13,7 @@ public class Covid19Factory {
 
 	public Symptom createSymptom(String symptomName) {
 		if(symptomMap.containsKey(symptomName)) {
+			System.out.println("Symptoma YA creado, devolviendo:"+symptomName);
 			return symptomMap.get(symptomName);
 		}
 		List<String> impact5 = Arrays.asList("fiebre", "tos seca", "astenia", "expectoracion");
@@ -35,6 +36,7 @@ public class Covid19Factory {
 			index = index1.get(impact1.indexOf(symptomName));
 		}
 		if (impact != 0) {
+			System.out.println("Symptoma NO creado, se añade:"+symptomName);
 			symptomMap.put(symptomName, new Symptom(symptomName, (int) index, impact));
 			return symptomMap.get(symptomName);
 		}else {
