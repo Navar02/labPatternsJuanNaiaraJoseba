@@ -22,12 +22,11 @@ import domain.Symptom;
 			p.addSymptom(new Symptom("s4", 10, 2), 4);
 			p.addSymptom(new Symptom("s5", 10, 8), 5);
 			Sorting sort1= new Sorting();
-			List<Symptom> l=new ArrayList<>(p.getSymptoms());
-			Covid19PacientIterator i=new Covid19PacientIterator(l);
-			i.goLast();
+			Iterator i=p.iterator(p.getSymptoms());
+			((Covid19PacientIterator) i).goLast();
 			System.out.println("Primera vuelta prueba de la clase:");
-			while(i.hasPrevious()) {
-				Symptom s=(Symptom) i.previous();
+			while(((Covid19PacientIterator) i).hasPrevious()) {
+				Symptom s=(Symptom) ((Covid19PacientIterator) i).previous();
 				System.out.println("Name:"+s.getName()+",severity:"+s.getSeverityIndex());
 			}
 			System.out.println("--------------------------");
@@ -36,7 +35,7 @@ import domain.Symptom;
 				System.out.println("Name:"+s.getName()+",severity:"+s.getSeverityIndex());
 			}
 			
-			Comparator com1=new symptomName();
+			Comparator com1=new SymptomName();
 			Iterator i1= sort1.sortedIterator(i, com1);
 			System.out.println(" ");
 			System.out.println("Segunda vuelta orden por nombre:");

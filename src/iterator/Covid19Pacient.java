@@ -123,5 +123,10 @@ public class Covid19Pacient extends Observable {
 	    return null;		
 		
 	}
+	public Covid19PacientIterator iterator(Set<Symptom> symptoms) {
+		List<Symptom> l=new ArrayList<>(symptoms);
+		Covid19PacientIterator i=new Covid19PacientIterator(l);
+		return i;
+	}
 }
 

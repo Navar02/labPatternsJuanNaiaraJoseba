@@ -1,12 +1,11 @@
 package iterator;
 
-import java.util.Iterator;
 import java.util.List;
 
 import adapter.InvertedIterator;
 import domain.Symptom;
 
-public class Covid19PacientIterator implements Iterator,InvertedIterator{
+ public class Covid19PacientIterator implements InvertedIterator{
 	List<Symptom> symptoms;
 	int position=0;
 
@@ -40,9 +39,7 @@ public class Covid19PacientIterator implements Iterator,InvertedIterator{
 
 	@Override
 	public void goLast() {
-		while(hasNext()) {
-			next();
-		}
+		position=symptoms.size();
 		
 	}
 
